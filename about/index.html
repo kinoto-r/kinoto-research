@@ -6,22 +6,14 @@
     <title>プロフィール | KINOTO RESEARCH</title>
     <meta name="description" content="KINOTO RESEARCH の運営者プロフィールと、これまでの経験・バックグラウンドをご紹介します。">
 
-    <link rel="stylesheet" href="/css/main.css">
+    <script src="/kinoto-research/js/layout.js"></script>
+    <script src="/kinoto-research/js/main.js"></script>
+
 </head>
 <body>
     <!-- ===== ヘッダー ===== -->
-    <header class="site-header">
-        <div class="container header-inner">
-            <div class="site-logo">
-                <a href="/">KINOTO RESEARCH</a>
-            </div>
-            <nav class="site-nav">
-                <a href="/about/">プロフィール</a>
-                <a href="/contact/">お問い合わせ</a>
-                <a href="/privacy/">プライバシーポリシー</a>
-            </nav>
-        </div>
-    </header>
+    <div id="site-header"></div>
+
 
     <!-- ===== メインコンテンツ ===== -->
     <main>
@@ -33,25 +25,28 @@
                     <div class="profile-main">
                         <h2>運営者について</h2>
                         <p>
-                            （ここにご自身のお名前、屋号、簡単な自己紹介を書いてください）<br>
-                            例：KINOTO RESEARCH は、国内外の法律・規則・標準規格などのリサーチを中心に、
+                            代表：田中照代<br>
+                            国内外の法律・規則・標準規格などのリサーチを中心に、
                             ビジネスに必要な情報をわかりやすく整理してお届けする個人事業です。
                         </p>
 
                         <h2>これまでの経験</h2>
                         <p>
-                            （これまでの職務経験や、法規・規格調査に関するバックグラウンドを記載するスペースです）
+                            米国の大学を卒業後、自動車業界で約20年働いた後、子育てを機に独立。
+                            法律・規則・標準規格などの調査・レポート作成を中心に活動しています。
                         </p>
                         <ul>
                             <li>海外の法規・標準規格のリサーチ業務</li>
-                            <li>自動車関連の輸出入や技術規格に関する調査支援</li>
+                            <li>輸出入や技術規格に関する調査支援</li>
+                            <li>海外規格の入手代行</li>
                             <li>レポート作成（日本語／英語）</li>
                             <!-- 必要に応じて項目を追加してください -->
                         </ul>
 
                         <h2>大切にしていること</h2>
                         <p>
-                            （調査方針、事実ベース・エビデンス重視など、KINOTO RESEARCHとしてのスタンスを記載するスペースです）
+                            お客様が必要とされる情報をできる限り正確に、わかりやすいかたちで提供することを心がけています。
+                            また、調査の過程や結果についても丁寧に説明し、ご納得いただけるよう努めています。
                         </p>
                     </div>
 
@@ -59,7 +54,7 @@
                         <h3>事業情報</h3>
                         <dl class="def-list">
                             <dt>屋号</dt>
-                            <dd>KINOTO RESEARCH</dd>
+                            <dd>きのとリサーチ KINOTO RESEARCH</dd>
 
                             <dt>事業内容</dt>
                             <dd>国内外の法律・規則・標準規格等の調査、レポート作成、コンサルテーション</dd>
@@ -68,7 +63,7 @@
                             <dd>日本語／英語</dd>
 
                             <dt>所在地</dt>
-                            <dd>（任意で都道府県程度まで記載）</dd>
+                            <dd>神奈川県藤沢市</dd>
                         </dl>
                     </aside>
                 </div>
@@ -77,17 +72,8 @@
     </main>
 
     <!-- ===== フッター ===== -->
-    <footer class="site-footer">
-        <div class="container footer-inner">
-            <div class="footer-brand">
-                <div class="footer-logo">KINOTO RESEARCH</div>
-                <div class="footer-tagline">Words out your curiosity</div>
-            </div>
-            <div class="footer-meta">
-                <small>© 2025 KINOTO RESEARCH</small>
-            </div>
-        </div>
-    </footer>
+    <div id="site-footer"></div>
+
 
     <script src="/js/main.js"></script>
 </body>
