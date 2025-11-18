@@ -1,7 +1,7 @@
 // js/head.js
 (function () {
   // GitHub Pages のプロジェクトサイト用ベースパス
-  const BASE_PATH = '/kinoto-research';
+  const BASE_PATH = ' ';
 
   function loadHeadFragment() {
     const url = `${BASE_PATH}/partials/head.html`;

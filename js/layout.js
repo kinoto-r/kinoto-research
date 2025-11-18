@@ -1,10 +1,8 @@
 // js/layout.js
 
 (function () {
-  // 今は GitHub Pages のプロジェクトサイトとして
-  // https://kinoto-r.github.io/kinoto-research/
-  // で公開している前提なので、ベースパスを固定します。
-  const BASE_PATH = '/kinoto-research';
+  
+  const BASE_PATH = '';
 
   function loadFragment(targetId, fileName) {
     const host = document.getElementById(targetId);
