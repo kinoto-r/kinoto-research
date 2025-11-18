@@ -1,20 +1,16 @@
-(function () {
-  const REPO_NAME = 'kinoto-research';
+// js/layout.js
 
-  function getBasePath() {
-    const path = window.location.pathname || '';
-    if (path.startsWith('/' + REPO_NAME + '/')) {
-      return '/' + REPO_NAME;
-    }
-    return '';
-  }
+(function () {
+  // 今は GitHub Pages のプロジェクトサイトとして
+  // https://kinoto-r.github.io/kinoto-research/
+  // で公開している前提なので、ベースパスを固定します。
+  const BASE_PATH = '/kinoto-research';
 
   function loadFragment(targetId, fileName) {
     const host = document.getElementById(targetId);
     if (!host) return;
 
-    const base = getBasePath();
-    const url = `${base}/partials/${fileName}`;
+    const url = `${BASE_PATH}/partials/${fileName}`;
 
     fetch(url)
       .then((res) => {
