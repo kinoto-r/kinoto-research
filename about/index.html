@@ -6,14 +6,12 @@
     <title>プロフィール | KINOTO RESEARCH</title>
     <meta name="description" content="KINOTO RESEARCH の運営者プロフィールと、これまでの経験・バックグラウンドをご紹介します。">
 
-    <script src="/kinoto-research/js/layout.js"></script>
-    <script src="/kinoto-research/js/main.js"></script>
-
+    <!-- 共通CSS -->
+    <link rel="stylesheet" href="/kinoto-research/css/main.css">
 </head>
 <body>
-    <!-- ===== ヘッダー ===== -->
+    <!-- ===== ヘッダー（JSで読み込み） ===== -->
     <div id="site-header"></div>
-
 
     <!-- ===== メインコンテンツ ===== -->
     <main>
@@ -40,7 +38,6 @@
                             <li>輸出入や技術規格に関する調査支援</li>
                             <li>海外規格の入手代行</li>
                             <li>レポート作成（日本語／英語）</li>
-                            <!-- 必要に応じて項目を追加してください -->
                         </ul>
 
                         <h2>大切にしていること</h2>
@@ -71,10 +68,12 @@
         </section>
     </main>
 
-    <!-- ===== フッター ===== -->
+    <!-- ===== フッター（JSで読み込み） ===== -->
     <div id="site-footer"></div>
 
-
-    <script src="/js/main.js"></script>
+    <!-- 共通レイアウトJS（ヘッダー／フッター差し込み用） -->
+    <script src="/kinoto-research/js/layout.js"></script>
+    <!-- サイト全体用のJS（必要なら中身を書く） -->
+    <script src="/kinoto-research/js/main.js"></script>
 </body>
 </html>
