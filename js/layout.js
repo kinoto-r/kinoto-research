@@ -1,16 +1,11 @@
-// js/layout.js
-
 (function () {
-  // リポジトリ名（GitHub Pages の "プロジェクトサイト" 用）
   const REPO_NAME = 'kinoto-research';
 
   function getBasePath() {
     const path = window.location.pathname || '';
-    // GitHub Pages の場合: /REPO_NAME/... で始まる
     if (path.startsWith('/' + REPO_NAME + '/')) {
       return '/' + REPO_NAME;
     }
-    // 将来、カスタムドメインを設定した場合: ルートが / になる想定
     return '';
   }
 
