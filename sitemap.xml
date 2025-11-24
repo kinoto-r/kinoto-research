@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.kinoto-research.jp/</loc>
+    <loc>https://kinoto-research.jp/</loc>
   </url>
   <url>
-    <loc>https://www.kinoto-research.jp/about/</loc>
+    <loc>https://kinoto-research.jp/about/</loc>
   </url>
   <url>
-    <loc>https://www.kinoto-research.jp/contact/</loc>
+    <loc>https://kinoto-research.jp/contact/</loc>
   </url>
   <url>
-    <loc>https://www.kinoto-research.jp/privacy/</loc>
+    <loc>https://kinoto-research.jp/privacy/</loc>
   </url>
 </urlset>
