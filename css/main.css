@@ -143,15 +143,16 @@ a:hover {
 }
 
 .card-image-placeholder {
-    border-radius: 10px;
-    background: linear-gradient(135deg, #dbeafe, #bfdbfe);
-    padding: 18px;
-    font-size: 0.85rem;
+    background-color: #e6f0ff; /* 既存のブルー系に合わせて調整 */
+    padding: 24px 16px;
+    text-align: center;
+}
+
+.card-main-title {
+    font-size: 1.4rem;   /* ← 少し大きめ */
     font-weight: 600;
-    color: #1f2937;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    color: #1f3a8a;      /* 落ち着いたネイビー */
+    letter-spacing: 0.05em;
 }
 
 .card-title {
