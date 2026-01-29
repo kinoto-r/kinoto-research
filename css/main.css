@@ -103,7 +103,7 @@ a:hover {
    ========================= */
 
 .hero {
-    background: linear-gradient(135deg, #1f3c88, #4f6fbf);
+    background: linear-gradient(135deg, #1f3c88, #374151);
     color: #ffffff;
     padding: 80px 0 70px;
 }
@@ -153,6 +153,33 @@ a:hover {
     font-weight: 600;
     color: #1f3a8a;      /* 落ち着いたネイビー */
     letter-spacing: 0.05em;
+}
+
+.card-subtitle {
+    display: block;
+    margin-top: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #4b5563;
+    letter-spacing: 0.08em;
+}
+
+.card--standards .card-image-placeholder {
+    background: linear-gradient(135deg, #d9e6ff, #e2e8f0);
+}
+
+.card--research .card-image-placeholder {
+    background: linear-gradient(135deg, #dfeaff, #e5e7eb);
+}
+
+.card--report .card-image-placeholder {
+    background: linear-gradient(135deg, #d6e4ff, #eceff3);
+}
+
+.card--standards .card-main-title,
+.card--research .card-main-title,
+.card--report .card-main-title {
+    color: #1f3c88;
 }
 
 .card-title {
