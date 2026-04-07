@@ -322,6 +322,53 @@ a:hover {
     font-size: 0.9rem;
 }
 
+.social-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    border: 1px solid #d6dbe1;
+    border-radius: 999px;
+    background-color: #ffffff;
+    color: #1f2937;
+    text-decoration: none;
+    font-size: 0.95rem;
+    line-height: 1;
+    transition: background-color 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.social-link img {
+    width: 18px;
+    height: 18px;
+    display: block;
+    object-fit: contain;
+}
+
+.social-link span {
+    display: inline-block;
+    font-weight: 500;
+}
+
+.social-link:hover,
+.social-link:focus {
+    background-color: #f7f9fb;
+    border-color: #aeb8c2;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transform: translateY(-1px);
+    text-decoration: none;
+}
+
+.social-link:focus-visible {
+    outline: 2px solid #4b5563;
+    outline-offset: 2px;
+}
 /* Contact */
 
 .contact-box {
