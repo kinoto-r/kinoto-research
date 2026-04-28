@@ -379,6 +379,21 @@ a:hover {
     margin-top: 24px;
 }
 
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-logo {
+  height: 32px;
+  width: auto;
+  opacity: 0.9;
+}
+
+.footer-text {
+  line-height: 1.4;
+}
 /* スマホ対応 */
 
 @media (max-width: 768px) {
