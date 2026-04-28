@@ -45,6 +45,7 @@
             </p>
 
             <div class="tool-grid">
+                <!-- Tool 1 -->
                 <article class="tool-card">
                     <div class="tool-preview">
                         <img src="../assets/images/tools/e-Gov改正履歴抽出ツール.png" alt="Legal amendment history extraction tool screenshot">
@@ -52,6 +53,27 @@
 
                     <div class="tool-body">
                         <h3 class="tool-title">Japan Legal Amendment History Extraction Tool (Prototype)</h3>
+
+                        <p class="tool-desc">
+                            This tool uses the e-Gov API to extract differences in legal provisions from amendment history and organize them visually in Excel format.
+                        </p>
+
+                        <ul class="tool-meta">
+                            <li><strong>Purpose:</strong> Investigation of legal amendments and amendment history comparison</li>
+                            <li><strong>Output:</strong> CSV / Excel-oriented output</li>
+                            <li><strong>Functionality:</strong> Difference classification (addition, deletion, revision)</li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- Tool 2 -->
+                <article class="tool-card">
+                    <div class="tool-preview">
+                        <img src="../assets/images/tools/e-Gov改正履歴抽出ツール.png" alt="Legal amendment history extraction tool screenshot (Tool 2)">
+                    </div>
+
+                    <div class="tool-body">
+                        <h3 class="tool-title">Japan Legal Amendment History Extraction Tool 2 (Prototype)</h3>
 
                         <p class="tool-desc">
                             This tool uses the e-Gov API to extract differences in legal provisions from amendment history and organize them visually in Excel format.
@@ -89,15 +111,21 @@
     <script src="/js/layout-en.js"></script>
     <script src="/js/main.js"></script>
 
-    <!-- Debug helper: confirms header/footer fragment injection -->
+    <!-- Debug helper: confirms header/footer fragment injection + tool cards -->
     <script>
       (function () {
         const prefix = "[KINOTO][tools-en] ";
         window.addEventListener("DOMContentLoaded", function () {
           const headerHost = document.getElementById("site-header");
           const footerHost = document.getElementById("site-footer");
+          const cards = document.querySelectorAll(".tool-card");
 
           console.info(prefix + "DOMContentLoaded");
+          console.info(prefix + "tool-card count:", cards.length);
+
+          if (cards.length < 2) {
+            console.error(prefix + "Tool cards are less than 2.");
+          }
 
           setTimeout(function () {
             if (!headerHost || !headerHost.innerHTML.trim()) {
