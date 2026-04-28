@@ -1,1 +1,23 @@
+﻿# Python
+__pycache__/
+*.pyc
+
+# Virtual Environment
+.venv/
+venv/
+
+# OS files
 .DS_Store
+Thumbs.db
+
+# Temporary files
+temp/
+
+# Environment variables
+.env
+
+# Logs
+*.log
+
+# IDE
+.vscode/
