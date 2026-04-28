@@ -57,6 +57,12 @@ a:hover {
     padding-left: 10px;
 }
 
+.section-lead {
+    margin: -8px 0 28px;
+    font-size: 0.98rem;
+    color: #4b5563;
+}
+
 /* =========================
    ヘッダー / ナビゲーション
    ========================= */
@@ -80,6 +86,12 @@ a:hover {
     font-size: 1.1rem;
     font-weight: 700;
     letter-spacing: 0.08em;
+}
+
+.header-logo {
+    height: 32px;
+    width: auto;
+    opacity: 0.9;
 }
 
 .site-nav {
@@ -123,7 +135,7 @@ a:hover {
 }
 
 /* =========================
-   サービスカード
+   サービストップカード
    ========================= */
 
 .card-grid {
@@ -132,26 +144,16 @@ a:hover {
     gap: 24px;
 }
 
-.card {
-    background-color: #ffffff;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(15, 23, 42, 0.08);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-}
-
 .card-image-placeholder {
-    background-color: #e6f0ff; /* 既存のブルー系に合わせて調整 */
+    background-color: #e6f0ff;
     padding: 24px 16px;
     text-align: center;
 }
 
 .card-main-title {
-    font-size: 1.4rem;   /* ← 少し大きめ */
+    font-size: 1.4rem;
     font-weight: 600;
-    color: #1f3a8a;      /* 落ち着いたネイビー */
+    color: #1f3a8a;
     letter-spacing: 0.05em;
 }
 
@@ -182,15 +184,66 @@ a:hover {
     color: #1f3c88;
 }
 
-.card-title {
-    margin: 0;
-    font-size: 1.1rem;
-}
-
 .card-text {
     margin: 0;
     font-size: 0.95rem;
     color: #444;
+}
+
+/* =========================
+   Toolsページ
+   ========================= */
+
+.tool-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+}
+
+.tool-card {
+    background-color: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 8px 16px rgba(15, 23, 42, 0.06);
+    overflow: hidden;
+}
+
+.tool-preview {
+    background: #f8fafc;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.tool-preview img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.tool-body {
+    padding: 18px;
+}
+
+.tool-title {
+    margin: 0 0 10px;
+    font-size: 1.1rem;
+    color: #1f2937;
+}
+
+.tool-desc {
+    margin: 0 0 14px;
+    color: #374151;
+    font-size: 0.95rem;
+}
+
+.tool-meta {
+    margin: 0;
+    padding-left: 1.1rem;
+    color: #374151;
+    font-size: 0.92rem;
+}
+
+.tool-meta li + li {
+    margin-top: 6px;
 }
 
 /* =========================
@@ -234,65 +287,7 @@ a:hover {
 }
 
 /* =========================
-   フッター
-   ========================= */
-
-.site-footer {
-    background-color: #0f172a;
-    color: #e5e7eb;
-    padding: 24px 0;
-    margin-top: 40px;
-}
-
-.footer-inner {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px;
-    font-size: 0.9rem;
-}
-
-.footer-logo {
-    font-weight: 700;
-    letter-spacing: 0.08em;
-}
-
-.footer-tagline {
-    font-size: 0.8rem;
-    opacity: 0.85;
-}
-
-/* =========================
-   レスポンシブ対応
-   ========================= */
-
-@media (max-width: 768px) {
-    .header-inner {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 6px;
-    }
-
-    .site-nav {
-        gap: 12px;
-        font-size: 0.9rem;
-    }
-
-    .hero {
-        padding: 60px 0 50px;
-    }
-
-    .hero-title {
-        font-size: 1.8rem;
-    }
-
-    .card-grid {
-        grid-template-columns: 1fr;
-    }
-}
-/* =========================
-   About / Contact 用レイアウト補助
+   About / Contact 用
    ========================= */
 
 .profile-layout {
@@ -369,7 +364,6 @@ a:hover {
     outline: 2px solid #4b5563;
     outline-offset: 2px;
 }
-/* Contact */
 
 .contact-box {
     background-color: #ffffff;
@@ -379,24 +373,59 @@ a:hover {
     margin-top: 24px;
 }
 
-.footer-brand {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+/* =========================
+   フッター
+   ========================= */
+
+.site-footer {
+    background-color: #0f172a;
+    color: #e5e7eb;
+    padding: 24px 0;
+    margin-top: 40px;
 }
 
-.header-logo {
-  height: 32px;
-  width: auto;
-  opacity: 0.9;
+.footer-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* 中央寄せ */
+    width: 100%;
+    text-align: center;
+    font-size: 0.9rem;
 }
 
-.footer-text {
-  line-height: 1.4;
+.footer-copy {
+    margin: 0;
+    letter-spacing: 0.01em;
 }
-/* スマホ対応 */
+
+/* =========================
+   レスポンシブ対応
+   ========================= */
 
 @media (max-width: 768px) {
+    .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .site-nav {
+        gap: 12px;
+        font-size: 0.9rem;
+    }
+
+    .hero {
+        padding: 60px 0 50px;
+    }
+
+    .hero-title {
+        font-size: 1.8rem;
+    }
+
+    .card-grid {
+        grid-template-columns: 1fr;
+    }
+
     .profile-layout {
         grid-template-columns: 1fr;
     }

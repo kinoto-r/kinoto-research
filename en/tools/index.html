@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <link rel="alternate" hreflang="ja" href="https://kinoto-research.jp/tools/" />
     <link rel="alternate" hreflang="en" href="https://kinoto-research.jp/en/tools/" />
@@ -23,10 +23,10 @@
 </head>
 
 <body>
-    <!-- ===== ナビゲーション（共通） ===== -->
+    <!-- ===== Navigation (shared slot) ===== -->
     <div id="site-header"></div>
 
-    <!-- ===== ヒーローセクション ===== -->
+    <!-- ===== Hero ===== -->
     <header class="hero">
         <div class="container hero-inner">
             <h1 class="hero-title">Research Tools</h1>
@@ -36,7 +36,7 @@
         </div>
     </header>
 
-    <!-- ===== ツール紹介セクション ===== -->
+    <!-- ===== Tool list ===== -->
     <section class="section">
         <div class="container">
             <h2 class="section-title">Tools under development and operation</h2>
@@ -45,34 +45,30 @@
             </p>
 
             <div class="tool-grid">
+                <article class="tool-card">
+                    <div class="tool-preview">
+                        <img src="../assets/images/tools/e-Gov改正履歴抽出ツール.png" alt="Legal amendment history extraction tool screenshot">
+                    </div>
 
-  <article class="tool-card">
-    <div class="tool-preview">
-      <img src="../assets/images/tools/e-Gov改正履歴抽出ツール.png" alt="法令改正履歴抽出ツール">
-    </div>
+                    <div class="tool-body">
+                        <h3 class="tool-title">Japan Legal Amendment History Extraction Tool (Prototype)</h3>
 
-    <div class="tool-body">
-      <h3 class="tool-title">Japan Legal Amendment History Extraction Tool(Prototype)</h3>
+                        <p class="tool-desc">
+                            This tool uses the e-Gov API to extract differences in legal provisions from amendment history and organize them visually in Excel format.
+                        </p>
 
-      <p class="tool-desc">
-        This tool uses the e-Gov API to extract the differences in legal provisions from the history of legal amendments and visually organizes them in Excel format.
-      </p>
-
-      <ul class="tool-meta">
-        <li><strong>Purpose:</strong>Investigation of legal amendments, comparison of amendment history</li>
-        <li><strong>Output:</strong>CSV Output</li>
-        <li><strong>Functionality</strong>Difference classification (addition, deletion, revision)</li>
-      </ul>
-
-  </article>
-
-</div>
-
+                        <ul class="tool-meta">
+                            <li><strong>Purpose:</strong> Investigation of legal amendments and amendment history comparison</li>
+                            <li><strong>Output:</strong> CSV / Excel-oriented output</li>
+                            <li><strong>Functionality:</strong> Difference classification (addition, deletion, revision)</li>
+                        </ul>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- ===== 限定公開について ===== -->
+    <!-- ===== Disclosure scope ===== -->
     <section class="section section-alt">
         <div class="container">
             <h2 class="section-title">Regarding the scope of disclosure</h2>
@@ -86,11 +82,38 @@
         </div>
     </section>
 
-    <!-- ===== フッター（共通） ===== -->
+    <!-- ===== Footer (shared slot) ===== -->
     <div id="site-footer"></div>
 
-    <!-- 共通レイアウトJS（ヘッダー／フッター差し込み用） -->
-    <script src="/js/layout.js"></script>
+    <!-- Shared layout JS -->
+    <script src="/js/layout-en.js"></script>
     <script src="/js/main.js"></script>
+
+    <!-- Debug helper: confirms header/footer fragment injection -->
+    <script>
+      (function () {
+        const prefix = "[KINOTO][tools-en] ";
+        window.addEventListener("DOMContentLoaded", function () {
+          const headerHost = document.getElementById("site-header");
+          const footerHost = document.getElementById("site-footer");
+
+          console.info(prefix + "DOMContentLoaded");
+
+          setTimeout(function () {
+            if (!headerHost || !headerHost.innerHTML.trim()) {
+              console.error(prefix + "Header fragment is empty or missing.");
+            } else {
+              console.info(prefix + "Header fragment loaded.");
+            }
+
+            if (!footerHost || !footerHost.innerHTML.trim()) {
+              console.error(prefix + "Footer fragment is empty or missing.");
+            } else {
+              console.info(prefix + "Footer fragment loaded.");
+            }
+          }, 300);
+        });
+      })();
+    </script>
 </body>
 </html>
